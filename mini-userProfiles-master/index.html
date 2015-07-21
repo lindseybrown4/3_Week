@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="userProfiles">
+<!-- module taken from app.js -->
+<head>
+	<title></title>
+</head>
+	<body ng-controller="MainController">
+
+<div ng-repeat="user in users">
+
+	<h2>{{user.first_name}} {{user.last_name}}</h2>
+	<img ng-src= {{user.avatar}} />
+	
+
+</div>
+
+
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js"></script> 
+		<!-- angular should be first then cdn, then app -->
+		<script src="app.js"></script>
+		<script src="controller.js"></script>
+		<script src="service.js"></script>
+
+	</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app="friendsList">  <!-- command 2 -->
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>babies with angular</title>
+	<link rel= "stylessheet" href="stylse.css">
+</head>
+
+	<body>
+	<div ng-controller="mainCtrl">
+	<h1>My Friends</h1>
+		<div ng-repeat="friend in friends">
+		 	<p> {{friend}} </p>
+		</div>
+		<h3>Add Friends</h3>
+		<input type="text" ng-model="newFriends">
+		<button ng-click="addFriend()">Add</button>
+	
+
+	</div>
+	<!-- SCRIPT -->
+	<!-- Angular -->
+
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js"></script> <!-- command 1 -->
+
+		<!-- app -->
+
+		<script src="./js/app.js"></script>  <!-- Step 3  -->
+		<script src="./js/mainCtrl.js"></script>
+	</body>
+</html>

@@ -1,0 +1,1 @@
+var app = angular.module("friendsList", []); // glue that connects all the other js files
