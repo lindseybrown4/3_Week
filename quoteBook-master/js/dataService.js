@@ -25,8 +25,10 @@ app.service('dataServices', function(){
 			quotes.push(newQuote); 
 	};
 
-	this.removeData = function() {
-		console.log
+	this.removeData = function(object) {
+		var badQuotes ={}; 
+		if 
+
 
 	}; 
 
