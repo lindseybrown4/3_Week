@@ -1,4 +1,9 @@
-var mod = angular.module('basicsApp'); 
+
+
+angular.module('basicsApp').service('basicsService', function() {   // step 6 declare the serice
+			return myServiceObject; 
+	
+	}); 
 
 var myServiceObject = {
 			getMeWords: function(){
@@ -7,7 +12,4 @@ var myServiceObject = {
 }; 
 
 
-	mod.service('basicsService', function() {   // step 6 declare the serice
-			return myServiceObject; 
 	
-	}); 

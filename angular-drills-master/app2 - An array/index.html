@@ -5,10 +5,10 @@
 	<body ng-controller="arrayController"> <!-- step 5 add controller -->
 		<!-- {{dogs}} step 6 test -->
 		<div class="row" ng-repeat="row in people">
-		<span class="personData"> Name: {{ row.name}} </span>
-		<span class="personData"> Email: {{ row.email}} </span>
-		<span class="personData"> Date Employed: {{ row.dateEmployed}} </span>
-		<span class="personData"> Phone Number: {{ row.phone}} </span>
+		<span class="personData"> {{row.name}} </span>
+		<span class="personData">{{row.email}} </span>
+		<span class="personData">{{ row.dateEmployed}} </span>
+		<span class="personData"> {{ row.phone}} </span>
 		</div>
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js"></script>
 		<script src="app.js"></script>
