@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html ng-app="userProfiles">
-<!-- module taken from app.js -->
+<html ng-app="userProfiles">  <!-- ng-app loads our primary angular module -->
+								
 <head>
 	<title></title>
 </head>
-	<body ng-controller="MainController">
+	<body ng-controller="MainController">  <!-- loads our controller for the view -->
 
 <div ng-repeat="user in users">
 
@@ -16,7 +16,7 @@
 
 
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js"></script> 
-		<!-- angular should be first then cdn, then app -->
+		<!-- CDN must go on top of your other files or your app will throw an error  -->
 		<script src="app.js"></script>
 		<script src="controller.js"></script>
 		<script src="service.js"></script>

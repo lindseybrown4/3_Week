@@ -1,2 +1,1 @@
-var app = angular.module('userProfiles', []); //this is where we are defining it so we need empty brackets
-
+var app = angular.module('userProfiles', []); //[] tell Angular that we are creating a new module named "userProfiles"

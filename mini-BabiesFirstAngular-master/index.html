@@ -5,11 +5,14 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>babies with angular</title>
-	<link rel= "stylessheet" href="stylse.css">
+	<link rel="stylesheet" type="text/css" href="./styles.css">
 </head>
 
 	<body>
 	<div ng-controller="mainCtrl">
+
+	<!-- What we've done is told Angular that anything that is on our mainCtrl's $scope (which we'll build in a minute), is available to be used in our index.html page with {{}}.  -->
+
 	<h1>My Friends</h1>
 		<div ng-repeat="friend in friends">
 		 	<p> {{friend}} </p>
@@ -17,7 +20,6 @@
 		<h3>Add Friends</h3>
 		<input type="text" ng-model="newFriends">
 		<button ng-click="addFriend()">Add</button>
-	
 
 	</div>
 	<!-- SCRIPT -->

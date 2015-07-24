@@ -1,6 +1,34 @@
-var app = angular.module('chatroom');
+(function () {
+    "use strict";
 
-app.controller('mainCtrl', function($scope, parseService){
+    angular.module('chatroom')
+        .controller('mainCtrl', function (parseService) {
+
+            var that = this;
+
+            this.getParseData = function () {
+                parseService.getData()
+                    .then(function (response) {
+                        that.messages = response.data.results;
+                    });
+
+            };
+
+            this.getParseData();
+
+            this.postData = function () {
+                parseService.postData({ text: this.message });
+            };
+
+            setInterval(function () {
+                that.getParseData();
+            }, 1500);
+        });
+
+} ());
+
+
+
   //In your controller you'll have a getParseData function and a postData function, but should be placed on $scope.
 
   //The getParseData function will call the getData method on the parseService object. You'll then save the result of that request to 
@@ -19,4 +47,4 @@ app.controller('mainCtrl', function($scope, parseService){
   // setInterval(function(){
   //   $scope.getParseData();
   // }, 1500)
-})
+

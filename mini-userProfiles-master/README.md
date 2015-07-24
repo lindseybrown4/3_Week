@@ -79,7 +79,6 @@ app.service('mainService', function() {
     }
   ]
 });
-```
 
 ## Step 4 - Our Service
 Our Service will do most of the apps heavy lifting. We want to keep our controllers as slim as possible. To do that we will need to create a function that delivers our data to our controller.
@@ -95,6 +94,7 @@ The next thing we need to do is to create a function in our controller that gath
 - Then, inject the mainService in the controller
 - Now, within the new getUsers function, we can access the mainService's getUsers function
   - Let's set a variable called $scope.users equal to the result of the mainService's function
+
   - Also, we should invoke our $scope.getUsers function after we have declared it or it won't run
 
 Now we have an object named "$scope.users" which represents our data. Because it is on the $scope object we can access it in our view by placing this within the body of our index.html, using `{{}}` binding.
